@@ -4,12 +4,141 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>some html&css knowledge</title>
   </head>
   <body>
-    <h1>kurs - rozszezenie</h1>
+    <!-- <h1>kurs - rozszezenie</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, molestias?
-    </p>
+    </p> -->
+
+    <!-- Typowy formularz składa się z następujących
+    elementów:
+    pól, które uzupełnia użytkownik,
+    pól, które użytkownik wybiera np. datę,
+    przycisku zatwierdzającego formularz. -->
+
+    <!-- text – imię i nazwisko użytkownika, == nie jest to typ inputu przeznaczony do przesyłania długich danych tekstowych
+email – adres email,
+number – liczba osób w rezerwacji biletu,
+date – data ważności prawa jazdy,
+url – adres strony internetowej,
+password – hasło (wyświetlają się kropki
+zamiast wprowadzanych znaków),
+submit – przycisk wysłania formularza -->
+
+    <!-- element label jest uzupełnieniem placeholdera -->
+    <!--  -->
+    <form>
+      <label for="name">your name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="your surname"
+      /><br />
+      <label
+        >your surname
+        <input type="text" name="surname" placeholder="your surname" /> </label
+      ><br />
+      <input type="email" placeholder="your email" required /><br />
+      <input type="number" placeholder="your phone number" /><br />
+      <input type="url" placeholder="your website" /><br />
+      <input type="password" placeholder="password" /><br />
+      <input type="submit" value="wyślij" /><br />
+    </form>
+
+    <form>
+      <label
+        >Wyrażam zgodę
+        <input type="checkbox" name="agreement" required />
+      </label>
+      <br />
+      <label
+        >Zamawiam produkt
+        <input type="checkbox" name="orderproduct" required />
+      </label>
+      <input type="submit" value="wyślij" />
+    </form>
+
+    <!-- Pola wyboru możemy zgrupować dzięki atrybutowi name. Zauważ, że w obu
+    inputach ma on taką samą wartość. Użytkownik może nie wybierać żadnej z
+    opcji, może też niektóre z nich lub wszystkie. -->
+
+    <!-- fieldset - może zgrupować inputy zbliżone do siebie tematycznie, w tej sytuacji legend będzie ich opisem, 
+    podobnie jak label było opisującym elementem dla inputa -->
+    <!-- wybór wielokrotny: -->
+    <form>
+      <fieldset>
+        <legend>Wybierz opcje dodatkowe</legend>
+        <label
+          >Pierwszeństwo wejścia na pokład
+          <input
+            type="checkbox"
+            name="extras"
+            value="priorityboarding"
+          /> </label
+        ><br />
+        <label
+          >Ubezpieczenie bagażu podróżnego
+          <input type="checkbox" name="extras" value="luggageinsurance" />
+        </label>
+      </fieldset>
+    </form>
+
+    <!-- pole jednokrotnego wyboru -->
+    <!-- Wybór jednokrotny czyli radio W tym przypadku użytkownik musi wybrać jedną z
+    opcji. Ten typ inputu to radio. Atrybut name dla wszystkich wykluczających
+    się elementów – tak jak przy checkboksach – jest identyczny. -->
+
+    <!-- <form>
+      <fieldset>
+        <legend>Wybierz preferowane miejsce</legend>
+        <label
+          >Przy oknie <input type="radio" name="seats" value="window" /> </label
+        ><br />
+        <label
+          >Przy korytarzu
+          <input type="radio" name="seats" value="corridor" />
+        </label>
+      </fieldset>
+    </form> -->
+
+    <form class="users_remarks">
+      <fieldset>
+        <label>
+          Twoje uwagi:
+          <textarea
+            cols="12"
+            rows="3"
+            style="resize: none"
+            class="users_remarks_input"
+          ></textarea>
+        </label>
+        <input type="submit" value="wyślij" />
+      </fieldset>
+    </form>
+
+    <div class="my_class">
+      <p id="lorem" style="color: green">Lorem ipsum…</p>
+    </div>
+
+    <img src="Screenshot_3.png" />
+
+    <!-- <h1>Hello world</h1>
+    <h2>Siema!</h2> -->
+
+    <div class="selectors-wrapper" id="parent">
+      <p>Pierwszy paragraf w naszym przykładzie</p>
+      <p>Drugi paragraf w naszym przykładzie</p>
+      <section class="children">
+        <p class="grandson">
+          Paragraf w selectors-wrapper wewnatrz elementu section
+        </p>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>

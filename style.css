@@ -1,0 +1,135 @@
+/* 
+CSS - Cascading Style Sheets
+o co chodzi z kaskadowością??
+
+Jak dokładnie działa CSS?
+CSS działa na zasadzie kaskadowości. Wynika ona z parsowania arkuszy CSS (od góry do dołu).
+Dzięki kaskadowości jesteśmy w stanie (w bardzo wyrafinowany sposób) nadpisywać wartości
+selektorów znajdujące się !! niżej w hierarchii !! selektorami znajdującymi się powyżej.
+
+Przesłanianie
+Jednym z założeń kaskadowości jest możliwość
+przesłonienia pewnych styli, jeżeli drugi selektor
+będzie działał znowu na dany element HTML.
+Zwane jest to zasadą ostatniego.
+
+
+ */
+
+/* p {
+  color: black;
+  font-size: 12px;
+}
+
+p {
+  color: red;
+} */
+
+/* 
+Zagnieżdżanie - dziedziczenie
+Dzieci przejmują po rodzicach pewne cechy
+Jeżeli znacznik HTML jest zagnieżdżony w innym
+znaczniku, to przejmuje on niektóre jego style.
+.my_class {
+  font-size: 28px;
+  border: groove;
+} */
+
+/* 
+/* CSS Specificity  
+Wstęp
+Zagnieżdżanie daje nam m.in. następujące
+możliwości:
+wybierania tylko tych znaczników HTML, które
+znajdują się w innych,
+nadpisywania wartości nadanych przez style
+ogólne przez te bardziej szczegółowe –
+nazywane jest to zasadą specyficzności. */
+img {
+  max-width: 100%;
+}
+
+/* .my_class p {
+  color: blue;
+}
+
+#lorem {
+  color: red;
+}
+
+/* p {
+  color: yellow !important;
+}   */
+
+/* SELEKTORY */
+/* Selektory w CSS - wrażliwość na wielkość liter
+W CSS jest wiele różnych typów selektorów.
+Takie połączenie selektorów oddziałujących tylko
+na elementy, na których nam zależy, to
+największa trudność w pisaniu kodu CSS.
+Selektory w CSS są wrażliwe na wielkość znaków
+(case sensitive).
+
+* = odwołanie do wszystkich elemementów na stronie
+p, h1, div, span, b... - po nazwie elementu
+.nazwaKlasy = po klasie elementu
+#selektorID = po id elemenu = MUSI BYĆ UNIKALNE
+h1, h2 {}; - 
+
+SELEKTOR DZIECKA =  >
+selektor1 > selektor2
+Jeżeli dwa dowolne selektory rozdzielimy
+znakiem >, wtedy szukamy wszystkich
+selektorów2, które są bezpośrednimi dziećmi
+selektora1.
+
+SELEKTOR POTOMKA 
+selektor1 selektor2
+Jeżeli dwa dowolne selektory rozdzielimy tylko
+spacją – szukamy wszystkich selektów2, które
+są potomkami selektor1.
+
+Łączenie spacją
+Selektory klas i identyfikatorów możemy ze sobą
+łączyć.
+
+#news .sport .football .quote
+
+SELEKTOR ATRYBUTU: 
+Atrybut jest równy
+Znajdź elementy, których atrybut id jest równy
+panel.
+
+div[id="panel"] {
+color: red;
+}
+
+
+
+
+*/
+
+/* .selectors-wrapper p {
+  color: red;
+} */
+
+/* .selectors-wrapper > p {
+  color: red;
+} */
+
+/* #parent .children .grandson {
+  color: tomato;
+} */
+
+/* div[id="parent"] {
+  color: blueviolet;
+} */
+
+/* stylowanie formularzy
+
+
+*/
+
+input:focus {
+  outline: red;
+}
