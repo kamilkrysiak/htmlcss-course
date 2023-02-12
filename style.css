@@ -130,6 +130,74 @@ color: red;
 
 */
 
-input:focus {
+/* input:focus {
   outline: red;
+} */
+
+/* 
+PSEUDOKLASY I PSEUDOELEMENTY
+*/
+/* 
+a:link { }
+a:visited { }
+a:hover { }
+a:active { }
+*/
+
+.list-styling li a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* POSITION
+
+Pozycja
+Domyślnie każdy element ma ustawioną pozycję
+statyczną – static.
+Jest to naturalne ułożenie elementów na stronie,
+czyli od lewej do prawej ( inline) i od góry do
+dołu ( block).
+Inne wartości position to:
+relative,
+absolute,
+fixed.
+
+*/
+
+.relative-element {
+  position: relative;
+  height: 500px;
+  width: 300px;
+  background-color: crimson;
+}
+
+.absolute-element-overlay {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+  right: 4%;
+  bottom: 4%;
+  z-index: 2;
+}
+
+.absolute-element {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: darkorange;
+  /* top, left, right, bottom */
+  right: 5%;
+  bottom: 5%;
+  z-index: 1;
+}
+
+/* fixed position */
+.fixed-element {
+  height: 50px;
+  width: 50px;
+  background-color: violet;
+  position: fixed;
+  top: 2%;
+  left: 2%;
 }
